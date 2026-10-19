@@ -35,24 +35,11 @@
                 <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab05/Mystery_02_OIII.fits')">Copy URL</button></li>
         </ol>
     
-    <!-- 1. The text you want to copy 
-    <input type="text" id="in01" value="https://geoffmathews.github.io/images_10L/lab05/Mystery_01_B.fits" readonly>
-
-    <!-- 2. The button that triggers the copy action 
-    <button onclick="copyText(in01)">Copy URL</button>
--->
     
     <script>
         function copyText(textToCopy) {
-            // Get the input field
-            //const copyTextElement = document.getElementById(textToCopy);
-
-            // Copy the text inside the input field to the clipboard
-            //navigator.clipboard.writeText(copyTextElement.value)
             navigator.clipboard.writeText(textToCopy)
                 .then(() => {
-                    // Optional: Alert the user or change button text to show success
-                    //alert("Copied to clipboard: " + copyTextElement.value);
                     alert("Copied to clipboard: " + textToCopy);
                 })
                 .catch(err => {
