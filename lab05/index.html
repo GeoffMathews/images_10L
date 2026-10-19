@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 05 mystery objects</title>
+</head>
+<body>
+
+    
+<h2>Mystery Object 1 (12,000 light-years)</h2>
+        <ol>
+            <li><a href="Mystery_01_B.fits">Mystery 01, B filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab05/Mystery_01_B.fits')">Copy URL</button></li>
+            <li><a href="Mystery_01_V.fits">Mystery 01, V filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab05/Mystery_01_V.fits')">Copy URL</button></li>
+            <li><a href="Mystery_01_R.fits">Mystery 01, R filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab05/Mystery_01_R.fits')">Copy URL</button></li>
+            <li><a href="Mystery_01_Halpha.fits">Mystery 01, H-alpha filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab05/Mystery_01_Halpha.fits')">Copy URL</button></li>
+            <li><a href="Mystery_01_OIII.fits">Mystery 01, OIII filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab05/Mystery_01_OIII.fits')">Copy URL</button></li>
+        </ol>
+<h2>Mystery Object 2 (2,600,000 light-years)</h2>
+        <ol>
+            <li><a href="Mystery_02_B.fits">Mystery 02, B filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab05/Mystery_02_B.fits')">Copy URL</button></li>
+            <li><a href="Mystery_02_V.fits">Mystery 02, V filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab05/Mystery_02_V.fits')">Copy URL</button></li>
+            <li><a href="Mystery_02_R.fits">Mystery 02, R filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab05/Mystery_02_R.fits')">Copy URL</button></li>
+            <li><a href="Mystery_02_Halpha.fits">Mystery 02, H-alpha filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab05/Mystery_02_Halpha.fits')">Copy URL</button></li>
+            <li><a href="Mystery_02_OIII.fits">Mystery 02, OIII filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab05/Mystery_02_OIII.fits')">Copy URL</button></li>
+        </ol>
+    
+    <!-- 1. The text you want to copy 
+    <input type="text" id="in01" value="https://geoffmathews.github.io/images_10L/lab05/Mystery_01_B.fits" readonly>
+
+    <!-- 2. The button that triggers the copy action 
+    <button onclick="copyText(in01)">Copy URL</button>
+-->
+    
+    <script>
+        function copyText(textToCopy) {
+            // Get the input field
+            //const copyTextElement = document.getElementById(textToCopy);
+
+            // Copy the text inside the input field to the clipboard
+            //navigator.clipboard.writeText(copyTextElement.value)
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                    // Optional: Alert the user or change button text to show success
+                    //alert("Copied to clipboard: " + copyTextElement.value);
+                    alert("Copied to clipboard: " + textToCopy);
+                })
+                .catch(err => {
+                    console.error("Failed to copy text: ", err);
+                });
+        }
+    </script>
+
+</body>
+</html>
