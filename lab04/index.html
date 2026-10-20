@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 04 training objects</title>
+</head>
+<body>
+
+    
+<h2>M27</h2>
+        <ol>
+            <li><a href="M27_Halpha.fits">M27, H-alpha filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab04/M27_Halpha.fits')">Copy URL</button></li>
+            <li><a href="M27_OIII.fits">M27, OIII filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab04/M27_OIII.fits')">Copy URL</button></li>
+        </ol>
+<h2>NGC 7331</h2>
+        <ol>
+            <li><a href="NGC_7331_B.fits">NGC 7331, B filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab04/NGC_7331_B.fits')">Copy URL</button></li>
+            <li><a href="NGC_7331_V.fits">NGC 7331, V filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab04/NGC_7331_V.fits')">Copy URL</button></li>
+            <li><a href="NGC_7331_R.fits">NGC 7331, R filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab04/NGC_7331_R.fits')">Copy URL</button></li>
+            <li><a href="NGC_7331_Halpha.fits">NGC 7331, H-alpha filter</a>, 
+                <button onclick="copyText('https://geoffmathews.github.io/images_10L/lab04/NGC_7331_Halpha.fits')">Copy URL</button></li>
+        </ol>
+    
+    
+    <script>
+        function copyText(textToCopy) {
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                    alert("Copied to clipboard: " + textToCopy);
+                })
+                .catch(err => {
+                    console.error("Failed to copy text: ", err);
+                });
+        }
+    </script>
+
+</body>
+</html>
